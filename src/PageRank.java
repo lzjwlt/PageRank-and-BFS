@@ -65,7 +65,7 @@ public class PageRank {
             Pr = PrNew;
             PrNew = getNewPR(Pr);
             double cost = getCost(PrNew,Pr);
-            System.out.printf("第 %d 次迭代， 用时 %f 秒，Cost = %f\n" ,i, (new Date().getTime() - begin.getTime())/1000.0,cost);
+            System.out.printf("第 %d 次迭代， 用时 %.3f 秒，Cost = %f\n" ,i, (new Date().getTime() - begin.getTime())/1000.0,cost);
             if(cost < COST)
                 break;
         }
