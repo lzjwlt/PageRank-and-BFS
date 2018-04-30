@@ -3,14 +3,12 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        File file1 = new File("data/0811.txt");
-        File file2 = new File("data/roadNet.txt");
-        File file3 = new File("data/LiveJournal1.txt");
-
-        solve(file1);
-        solve(file2);
-        solve(file3);
+        for(String filePath : args){
+            File file = new File(filePath);
+            solve(file);
+        }
     }
+
 
     private static void solve(File file){
         System.out.println("文件名：" + file.getName());
